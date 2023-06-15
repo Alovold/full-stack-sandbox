@@ -1,6 +1,7 @@
 const express = require('express')
+const config = require('./config')
 const app = express() //this is an instance of the express method (kind of a class?)
-const PORT = 3001
+//const PORT = 3001
 
 
 //middleware
@@ -29,6 +30,6 @@ app.post("/heroes", (req, res)=>{
     res.end()
 })
 
-app.listen(PORT, ()=>{
-    console.log(`server is listening at port ${PORT}`)
+app.listen(config.port, ()=>{
+    console.log(`server is listening at port ${config.port}`)
 })
